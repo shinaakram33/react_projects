@@ -13,7 +13,7 @@ class Dishdetail extends Component{
           return (
             <li key={com.id}>
                   <p>{com.comment}</p>
-                  <p>--{com.author}, {com.date}</p>
+                  <p>--{com.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(com.date)))}</p>
             </li>
           );
       });
